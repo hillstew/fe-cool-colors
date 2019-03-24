@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { ColorCard } from '../../components/ColorCard/ColorCard';
+import { toggleLocked } from '../../actions';
 
 export class ColorContainer extends Component {
   render() {
-    const { colors } = this.props;
+    const { colors, toggleLocked } = this.props;
     const colorBoxes = colors.map(color => {
-      return (
-        <div className='color-box' style={{ backgroundColor: color.hex }}>
-          {color.hex}
-        </div>
-      );
+      return <ColorCard
+        key={color.id}
+        color={color}
+        toggleLocked={toggleLocked} />;
     });
 
-    return <div className='ColorContainer'>{colorBoxes}</div>;
+    return <div className="ColorContainer">{colorBoxes}</div>;
   }
 }
 
@@ -20,4 +21,8 @@ export const mapStateToProps = state => ({
   colors: state.colors
 });
 
-export default connect(mapStateToProps)(ColorContainer);
+export const mapDispatchToProps = dispatch => ({
+  toggleLocked: id => dispatch(toggleLocked(id))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ColorContainer);
