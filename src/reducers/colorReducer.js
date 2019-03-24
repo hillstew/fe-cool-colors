@@ -4,7 +4,7 @@ export const colorReducer = (state = [], action) => {
       return action.colors;
     case 'TOGGLE_LOCKED':
       return [...state].map(color => {
-        if (color.id === action.color.id) {
+        if (color.id === action.id) {
           return { ...color, isLocked: !color.isLocked };
         }
         return color;
