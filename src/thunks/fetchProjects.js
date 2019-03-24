@@ -7,11 +7,7 @@ export const fetchProjects = () => {
     try {
       dispatch(setLoading(true));
       const response = await getData(url);
-      const results = await response.json();
-      const projects = results.map(project => {
-        project.isLocked = false;
-        return project;
-      });
+      const projects = await response.json();
       dispatch(setLoading(false));
       dispatch(setProjects(projects));
     } catch (error) {
