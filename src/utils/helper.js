@@ -1,3 +1,5 @@
+import shortid from 'shortid';
+
 export const updateColors = (colors = []) => {
   if (colors.length) {
     return [...colors].map(color => {
@@ -11,7 +13,8 @@ export const updateColors = (colors = []) => {
     while (newColors.length < 5) {
       newColors.push({
         hex: `#${generateColor()}`,
-        isLocked: false
+        isLocked: false,
+        id: shortid.generate()
       });
     }
     return newColors;
@@ -19,12 +22,12 @@ export const updateColors = (colors = []) => {
 };
 
 const possibleCharacters = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
   '1',
   '2',
   '3',
