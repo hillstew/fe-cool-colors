@@ -6,7 +6,7 @@ import { palettesReducer } from './palettesReducer';
 import { combineReducers } from 'redux';
 
 export const rootReducer = combineReducers({
-  color: colorReducer,
+  colors: colorReducer,
   error: errorReducer,
   isLoading: loadingReducer,
   projects: projectsReducer,
