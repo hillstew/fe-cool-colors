@@ -23,7 +23,7 @@ export const setPalettes = palettes => ({
   palettes
 });
 
-export const toggleLocked = color => ({
+export const toggleLocked = id => ({
   type: 'TOGGLE_LOCKED',
-  color
+  id
 });
