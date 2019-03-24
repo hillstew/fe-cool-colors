@@ -1,0 +1,18 @@
+.ColorCard {
+
+  .unlocked-button {
+    background: url(../images/lock-open.svg);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    border: none;
+  }
+
+  .locked-button {
+    background: url(../images/lock-closed.svg);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    border: none;
+  }
+}
