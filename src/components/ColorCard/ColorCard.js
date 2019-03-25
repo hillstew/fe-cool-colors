@@ -5,10 +5,11 @@ export const ColorCard = ({ color, toggleLocked }) => {
 
   return (
     <div className="ColorCard" style={{ backgroundColor: hex }}>
-      <p className='hex-code'>{hex}</p>
+      <p className="hex-code">{hex}</p>
       <button
         onClick={() => toggleLocked(id)}
-        className={isLocked ? 'locked-button' : 'unlocked-button'} />
+        className={isLocked ? 'locked-button' : 'unlocked-button'}
+      />
     </div>
   );
 };
