@@ -1,4 +1,14 @@
-div {
-  height: 200px;
-  width: 200px;
+.ColorContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  .generate-color-button {
+    border-radius: 5px;
+    border: none;
+    background-color: #ece6e6;
+    height: 20px;
+    width: 50%;
+    font-family: $font-light;
+    margin-top: 30px;
+  }
 }

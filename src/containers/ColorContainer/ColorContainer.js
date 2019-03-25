@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ColorCard } from '../../components/ColorCard/ColorCard';
-import { toggleLocked } from '../../actions';
+import { toggleLocked, setColors } from '../../actions';
+import { updateColors } from '../../utils/helper';
 
 export class ColorContainer extends Component {
   render() {
-    const { colors, toggleLocked } = this.props;
+    const { colors, toggleLocked, setColors } = this.props;
     const colorBoxes = colors.map(color => {
       return <ColorCard
         key={color.id}
@@ -13,7 +14,14 @@ export class ColorContainer extends Component {
         toggleLocked={toggleLocked} />;
     });
 
-    return <div className="ColorContainer">{colorBoxes}</div>;
+    return <div className="ColorContainer">
+      {colorBoxes}
+      <div>
+        <button 
+          className='generate-color-button'
+          onClick={() => setColors(updateColors(colors))}>Generate!</button>
+      </div>
+    </div>;
   }
 }
 
@@ -22,7 +30,8 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  toggleLocked: id => dispatch(toggleLocked(id))
+  toggleLocked: id => dispatch(toggleLocked(id)),
+  setColors: colors => dispatch(setColors(colors))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ColorContainer);
