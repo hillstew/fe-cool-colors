@@ -18,6 +18,11 @@ export const setProjects = projects => ({
   projects
 });
 
+export const setProject = project => ({
+  type: 'SET_PROJECT',
+  project
+});
+
 export const setPalettes = palettes => ({
   type: 'SET_PALETTES',
   palettes
