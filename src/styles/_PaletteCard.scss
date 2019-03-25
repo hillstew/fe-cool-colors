@@ -1,0 +1,26 @@
+.PaletteCard {
+  font-family: $font-light;
+  display: flex;
+  justify-content: center;
+
+  .palette {
+    border: 2px solid black;
+    display: flex;
+    height: 50px;
+  }
+
+  .palette-box {
+    // height: 30px;
+    width: 50px;
+  }
+
+  .delete-palette-button {
+    border-radius: 5px;
+    border: none;
+    background-color: #808080;
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+    font-family: $font-light;
+  }
+}
