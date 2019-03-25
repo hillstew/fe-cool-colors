@@ -7,6 +7,7 @@ import { fetchProjects } from '../../thunks/fetchProjects';
 import { fetchPalettes } from '../../thunks/fetchPalettes';
 import { generateColors } from '../../utils/helper';
 import ColorContainer from '../ColorContainer/ColorContainer';
+import ProjectContainer from '../ProjectContainer/ProjectContainer';
 
 export class App extends Component {
   componentDidMount() {
@@ -19,6 +20,7 @@ export class App extends Component {
     return (
       <div className="App">
         <ColorContainer />
+        <ProjectContainer />
       </div>
     );
   }
