@@ -1,18 +1,31 @@
 .ColorCard {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 5px;
+
+  .hex-code {
+    font-family: $font-bold;
+    font-size: 2em;
+    margin: 0;
+  }
 
   .unlocked-button {
     background: url(../images/lock-open.svg);
     background-size: cover;
-    height: 20px;
-    width: 20px;
+    height: 33px;
+    width: 33px;
     border: none;
+    cursor: pointer;
   }
 
   .locked-button {
     background: url(../images/lock-closed.svg);
     background-size: cover;
-    height: 20px;
-    width: 20px;
+    height: 33px;
+    width: 33px;
     border: none;
+    cursor: pointer;
   }
 }
