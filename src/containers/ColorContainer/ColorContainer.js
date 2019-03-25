@@ -16,7 +16,7 @@ export class ColorContainer extends Component {
     return (
       <div className="ColorContainer">
         {colorBoxes}
-        <div>
+        <div className="color-controls">
           <button
             className="generate-color-button"
             onClick={() => setColors(updateColors(colors))}>
