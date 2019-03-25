@@ -4,7 +4,10 @@ export const updateColors = (colors = []) => {
   if (colors.length) {
     return [...colors].map(color => {
       if (!color.isLocked) {
-        return generateColor();
+        return {
+          ...color,
+          hex: `#${generateColor()}`
+        };
       }
       return color;
     });
