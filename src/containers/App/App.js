@@ -5,21 +5,20 @@ import { withRouter, Route, Switch } from 'react-router-dom';
 import { setColors } from '../../actions';
 import { fetchProjects } from '../../thunks/fetchProjects';
 import { fetchPalettes } from '../../thunks/fetchPalettes';
-import { updateColors } from '../../utils/helper';
+import { generateColors } from '../../utils/helper';
 import ColorContainer from '../ColorContainer/ColorContainer';
 
 export class App extends Component {
   componentDidMount() {
     this.props.fetchProjects();
     this.props.fetchPalettes();
-    this.props.setColors(updateColors());
+    this.props.setColors(generateColors());
   }
 
   render() {
     return (
       <div className="App">
         <ColorContainer />
-        
       </div>
     );
   }

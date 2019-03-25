@@ -8,20 +8,23 @@ export class ColorContainer extends Component {
   render() {
     const { colors, toggleLocked, setColors } = this.props;
     const colorBoxes = colors.map(color => {
-      return <ColorCard
-        key={color.id}
-        color={color}
-        toggleLocked={toggleLocked} />;
+      return (
+        <ColorCard key={color.id} color={color} toggleLocked={toggleLocked} />
+      );
     });
 
-    return <div className="ColorContainer">
-      {colorBoxes}
-      <div>
-        <button 
-          className='generate-color-button'
-          onClick={() => setColors(updateColors(colors))}>Generate!</button>
+    return (
+      <div className="ColorContainer">
+        {colorBoxes}
+        <div>
+          <button
+            className="generate-color-button"
+            onClick={() => setColors(updateColors(colors))}>
+            Generate!
+          </button>
+        </div>
       </div>
-    </div>;
+    );
   }
 }
 
@@ -34,4 +37,7 @@ export const mapDispatchToProps = dispatch => ({
   setColors: colors => dispatch(setColors(colors))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ColorContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ColorContainer);

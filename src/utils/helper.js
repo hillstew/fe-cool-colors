@@ -1,56 +1,35 @@
 import shortid from 'shortid';
 
-export const updateColors = (colors = []) => {
-  if (colors.length) {
-    return [...colors].map(color => {
-      if (!color.isLocked) {
-        return {
-          ...color,
-          hex: `#${generateColor()}`
-        };
-      }
-      return color;
-    });
-  } else {
-    let newColors = [];
-    while (newColors.length < 5) {
-      newColors.push({
-        hex: `#${generateColor()}`,
-        isLocked: false,
-        id: shortid.generate()
-      });
+export const updateColors = colors => {
+  return [...colors].map(color => {
+    if (!color.isLocked) {
+      color.hex = `#${makeColor()}`;
     }
-    return newColors;
-  }
+    return color;
+  });
 };
 
-const possibleCharacters = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  '0'
-];
+export const generateColors = () => {
+  let newColors = [];
+  while (newColors.length < 5) {
+    newColors.push({
+      hex: `#${makeColor()}`,
+      isLocked: false,
+      id: shortid.generate()
+    });
+  }
+  return newColors;
+};
 
-const generateColor = () => {
+const hexChars = Array.from('ABCDEF0123456789');
+const makeColor = () => {
   let color = [];
   while (color.length < 6) {
-    color.push(possibleCharacters[randomNumber()]);
+    color.push(hexChars[randomNumber()]);
   }
   return color.join('');
 };
 
 const randomNumber = () => {
-  return Math.floor(Math.random() * Math.floor(possibleCharacters.length - 1));
+  return Math.floor(Math.random() * Math.floor(hexChars.length - 1));
 };
