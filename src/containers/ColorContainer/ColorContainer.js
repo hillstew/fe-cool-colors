@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { ColorCard } from '../../components/ColorCard/ColorCard';
 import { toggleLocked, setColors } from '../../actions';
 import { updateColors } from '../../utils/helper';
+import Controls from '../Controls/Controls';
 
 export class ColorContainer extends Component {
   render() {
@@ -16,13 +17,7 @@ export class ColorContainer extends Component {
     return (
       <div className="ColorContainer">
         {colorBoxes}
-        <div className="color-controls">
-          <button
-            className="generate-color-button"
-            onClick={() => setColors(updateColors(colors))}>
-            Generate!
-          </button>
-        </div>
+        <Controls />
       </div>
     );
   }
