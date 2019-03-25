@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'cereal';
+  src: url(../AirbnbCereal-Black.ttf);
+}
+
+@font-face {
+  font-family: 'cereal-light';
+  src: url(../AirbnbCereal-Light.ttf);
+}
+
+$font-bold: 'cereal';
+$font-light: 'cereal-light';
