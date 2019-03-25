@@ -18,8 +18,8 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>We're runnin!!!</h1>
         <ColorContainer />
+        
       </div>
     );
   }
