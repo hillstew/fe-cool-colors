@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls Controls component should match the snapshot 1`] = `
+<div
+  className="color-controls"
+>
+  <button
+    className="generate-color-button"
+    onClick={[Function]}
+  >
+    Generate!
+  </button>
+  <select
+    name="projectSelection"
+    onChange={[Function]}
+    value=""
+  >
+    <option
+      key="abcdefg"
+      value="Movie Tracker"
+    >
+      Movie Tracker
+    </option>
+    <option
+      value="New Project"
+    >
+      New Project
+    </option>
+  </select>
+  <button
+    onClick={[Function]}
+  >
+    Save
+  </button>
+</div>
+`;
