@@ -11,7 +11,7 @@ export const fetchProjects = () => {
       dispatch(setLoading(false));
       dispatch(setProjects(projects));
     } catch (error) {
-      dispatch(setError(error));
+      dispatch(setError(error.message));
     }
   };
 };

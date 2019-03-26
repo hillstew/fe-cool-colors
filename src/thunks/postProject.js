@@ -12,7 +12,7 @@ export const postProject = project => {
       dispatch(setLoading(false));
       dispatch(setProject({ ...project, id }));
     } catch (error) {
-      dispatch(setError(error));
+      dispatch(setError(error.message));
     }
   };
 };
