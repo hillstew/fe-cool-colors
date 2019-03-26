@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
 export class ProjectContainer extends Component {
@@ -12,7 +12,7 @@ export class ProjectContainer extends Component {
       });
 
       return (
-        <ProjectCard matchingPalettes={matchingPalettes} project={project} />
+        <ProjectCard matchingPalettes={matchingPalettes} project={project} key={project.id} />
       );
     });
 
