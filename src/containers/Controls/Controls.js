@@ -3,13 +3,16 @@ import { connect } from 'react-redux';
 import { setColors } from '../../actions';
 import { updateColors } from '../../utils/helper';
 import { postProject } from '../../thunks/postProject';
+import { postPalette } from '../../thunks/postPalette';
+import { postPaletteToProject } from '../../thunks/postPaletteToProject';
 
 export class Controls extends Component {
   constructor() {
     super();
     this.state = {
       projectSelection: '',
-      newProject: ''
+      newProject: '',
+      newPalette: ''
     };
   }
 
@@ -19,14 +22,43 @@ export class Controls extends Component {
   };
 
   handleClick = () => {
-    const { postProject } = this.props;
-    const { newProject } = this.state;
-    postProject({ name: newProject });
+    const { projects, colors, postPaletteToProject, postPalette } = this.props;
+    const { newProject, newPalette, projectSelection } = this.state;
+    if (projectSelection === 'New Project') {
+      postPaletteToProject({ name: newProject }, {
+        name: newPalette,
+        color_1: colors[0].hex,
+        color_2: colors[1].hex,
+        color_3: colors[2].hex,
+        color_4: colors[3].hex,
+        color_5: colors[4].hex
+      });
+    } else {
+      let projId;
+      console.log(projects)
+      projects.forEach(project => {
+        if (project.name === projectSelection) {
+          console.log(project)
+          projId = project.id
+        }
+      })
+      console.log(projId)
+
+      postPalette({
+        name: newPalette,
+        color_1: colors[0].hex,
+        color_2: colors[1].hex,
+        color_3: colors[2].hex,
+        color_4: colors[3].hex,
+        color_5: colors[4].hex,
+        project_id: projId
+      })
+    }
   };
 
   render() {
     const { projects, colors, setColors } = this.props;
-    const { projectSelection } = this.state;
+    const { projectSelection, newProject, newPalette } = this.state;
     const options = projects.map(project => {
       return (
         <option key={project.id} value={project.name}>
@@ -47,16 +79,24 @@ export class Controls extends Component {
           value={projectSelection}
           onChange={this.handleChange}
         >
+          <option value='Select Project'>Select Project</option>
           {options}
           <option value='New Project'>New Project</option>
         </select>
-        {projectSelection === 'New Project' && (
-          <input
-            name='newProject'
-            placeholder='Project Name'
-            onChange={this.handleChange}
-          />
-        )}
+        <input
+          name='newProject'
+          value={
+            projectSelection !== 'New Project' ? projectSelection : newProject
+          }
+          placeholder='Project Name'
+          onChange={this.handleChange}
+        />
+        <input
+          name='newPalette'
+          value={newPalette}
+          placeholder='Palette Name'
+          onChange={this.handleChange}
+        />
         <button onClick={this.handleClick}>Save</button>
       </div>
     );
@@ -70,7 +110,10 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   setColors: colors => dispatch(setColors(colors)),
-  postProject: project => dispatch(postProject(project))
+  postProject: project => dispatch(postProject(project)),
+  postPalette: palette => dispatch(postPalette(palette)),
+  postPaletteToProject: (project, palette) =>
+    dispatch(postPaletteToProject(project, palette))
 });
 
 export default connect(
