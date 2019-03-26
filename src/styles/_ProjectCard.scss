@@ -1,9 +1,21 @@
 .ProjectCard {
   border-bottom: 2px solid rgb(193, 193, 193);
-  padding: 10px;
+  padding: 10px 50px;
+  text-align: left;
 
   .project-name {
+    display: inline-block;
     font-family: $font-bold;
-    text-align: right;
+    margin: 5px 0;
+  }
+
+  .project-edit-button {
+    background: url(../images/edit.svg);
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    margin-left: 5px;
+    width: 20px;
   }
 }
