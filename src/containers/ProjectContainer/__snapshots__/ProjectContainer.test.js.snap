@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectContainer should match the snaphot 1`] = `
+<div
+  className="ProjectContainer"
+>
+  <ProjectCard
+    key="12"
+    matchingPalettes={
+      Array [
+        Object {
+          "name": "blue-palette",
+          "project_id": 12,
+        },
+      ]
+    }
+    project={
+      Object {
+        "id": 12,
+        "name": "Movie-Tracker",
+      }
+    }
+  />
+</div>
+`;
