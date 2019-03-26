@@ -22,7 +22,7 @@ export const generateColors = () => {
 };
 
 const hexChars = Array.from('ABCDEF0123456789');
-const makeColor = () => {
+export const makeColor = () => {
   let color = [];
   while (color.length < 6) {
     color.push(hexChars[randomNumber()]);
@@ -30,6 +30,6 @@ const makeColor = () => {
   return color.join('');
 };
 
-const randomNumber = () => {
+export const randomNumber = () => {
   return Math.floor(Math.random() * Math.floor(hexChars.length - 1));
 };
