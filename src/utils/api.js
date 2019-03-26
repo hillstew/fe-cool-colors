@@ -21,3 +21,17 @@ export const postData = async (url, data) => {
   }
   return await response;
 };
+
+export const deleteData = async url => {
+  const response = await fetch(url, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
+  return await response;
+};
