@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { ProjectCard } from '../ProjectCard/ProjectCard';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 export class ProjectContainer extends Component {
   render() {
