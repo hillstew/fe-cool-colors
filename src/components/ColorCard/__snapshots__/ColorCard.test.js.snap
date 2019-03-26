@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorCard should match snapshot 1`] = `
+<div
+  className="ColorCard"
+  style={
+    Object {
+      "backgroundColor": "#2309ED",
+    }
+  }
+>
+  <p
+    className="hex-code"
+  >
+    #2309ED
+  </p>
+  <button
+    className="unlocked-button"
+    onClick={[Function]}
+  />
+</div>
+`;
