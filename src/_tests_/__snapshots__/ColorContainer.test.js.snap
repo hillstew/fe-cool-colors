@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorContainer should match the snapshot 1`] = `
+<div
+  className="ColorContainer"
+>
+  <ColorCard
+    color="red"
+    toggleLocked={[MockFunction]}
+  />
+  <ColorCard
+    color="orange"
+    toggleLocked={[MockFunction]}
+  />
+  <ColorCard
+    color="yellow"
+    toggleLocked={[MockFunction]}
+  />
+  <ColorCard
+    color="green"
+    toggleLocked={[MockFunction]}
+  />
+  <ColorCard
+    color="blue"
+    toggleLocked={[MockFunction]}
+  />
+  <Connect(Controls) />
+</div>
+`;
