@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { withRouter, Route, Switch } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+// import { withRouter, Route, Switch } from 'react-router-dom';
 import { setColors } from '../../actions';
 import { fetchProjects } from '../../thunks/fetchProjects';
 import { fetchPalettes } from '../../thunks/fetchPalettes';
