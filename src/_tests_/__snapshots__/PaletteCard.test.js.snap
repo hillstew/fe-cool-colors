@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaletteCard should pass the snapshot 1`] = `
+<div
+  className="PaletteCard"
+>
+  <p>
+    test-palette
+  </p>
+  <div
+    className="palette"
+  >
+    <div
+      className="palette-box"
+      style={
+        Object {
+          "backgroundColor": "808080",
+        }
+      }
+    />
+    <div
+      className="palette-box"
+      style={
+        Object {
+          "backgroundColor": "232323",
+        }
+      }
+    />
+    <div
+      className="palette-box"
+      style={
+        Object {
+          "backgroundColor": "1a1a1a",
+        }
+      }
+    />
+    <div
+      className="palette-box"
+      style={
+        Object {
+          "backgroundColor": "aa2222",
+        }
+      }
+    />
+    <div
+      className="palette-box"
+      style={
+        Object {
+          "backgroundColor": "123abc",
+        }
+      }
+    />
+  </div>
+  <button
+    className="delete-palette-button"
+  >
+    Delete
+  </button>
+</div>
+`;

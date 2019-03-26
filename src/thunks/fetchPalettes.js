@@ -11,7 +11,7 @@ export const fetchPalettes = () => {
       dispatch(setLoading(false));
       dispatch(setPalettes(palettes));
     } catch (error) {
-      dispatch(setError(error));
+      dispatch(setError(error.message));
     }
   };
 };

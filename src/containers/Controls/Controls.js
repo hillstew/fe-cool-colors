@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setColors } from '../../actions';
 import { updateColors } from '../../utils/helper';
@@ -19,8 +19,9 @@ export class Controls extends Component {
   };
 
   handleClick = () => {
+    const { postProject } = this.props;
     const { newProject } = this.state;
-    this.props.postProject({ name: newProject });
+    postProject({ name: newProject });
   };
 
   render() {
@@ -34,23 +35,25 @@ export class Controls extends Component {
       );
     });
     return (
-      <div className="color-controls">
+      <div className='color-controls'>
         <button
-          className="generate-color-button"
-          onClick={() => setColors(updateColors(colors))}>
+          className='generate-color-button'
+          onClick={() => setColors(updateColors(colors))}
+        >
           Generate!
         </button>
         <select
-          name="projectSelection"
+          name='projectSelection'
           value={projectSelection}
-          onChange={this.handleChange}>
+          onChange={this.handleChange}
+        >
           {options}
-          <option value="New Project">New Project</option>
+          <option value='New Project'>New Project</option>
         </select>
         {projectSelection === 'New Project' && (
           <input
-            name="newProject"
-            placeholder="Project Name"
+            name='newProject'
+            placeholder='Project Name'
             onChange={this.handleChange}
           />
         )}

@@ -11,14 +11,15 @@ import ProjectContainer from '../ProjectContainer/ProjectContainer';
 
 export class App extends Component {
   componentDidMount() {
-    this.props.fetchProjects();
-    this.props.fetchPalettes();
-    this.props.setColors(generateColors());
+    const { fetchProjects, fetchPalettes, setColors } = this.props;
+    fetchProjects();
+    fetchPalettes();
+    setColors(generateColors());
   }
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <ColorContainer />
         <ProjectContainer />
       </div>
