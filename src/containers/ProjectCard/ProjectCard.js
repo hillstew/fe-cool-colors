@@ -30,7 +30,6 @@ export class ProjectCard extends Component {
     return (
       <div className='ProjectCard'>
         <h3 className='project-name'>{project.name}</h3>
-        <button className='project-edit-button' />
         <button
           className='delete-project-button'
           onClick={() => deleteProject(project.id, palettes, projects)}
