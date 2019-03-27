@@ -1,15 +1,14 @@
 import React from 'react';
-import shortid from 'shortid';
 
 export const PaletteCard = (props) => {
   const { palette, deletePalette, palettes, setColors } = props;
   const { name, color_1, color_2, color_3, color_4, color_5, id } = palette;
   const colors = [color_1, color_2, color_3, color_4, color_5];
   const colorPackages = colors.map(color => {
-    return { hex: color, isLocked: false, id: shortid.generate() };
+    return { hex: color, isLocked: false };
   });
   const colorBoxes = colorPackages.map(color => {
-    return <div style={{ backgroundColor: color.hex }} className='palette-box' key={color.id} />;
+    return <div style={{ backgroundColor: color.hex }} className='palette-box' key={color.hex} />;
   });
 
   return (
