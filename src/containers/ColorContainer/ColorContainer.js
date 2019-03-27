@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { ColorCard } from '../../components/ColorCard/ColorCard';
 import { toggleLocked } from '../../actions';
 import Controls from '../Controls/Controls';
@@ -34,3 +35,8 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ColorContainer);
+
+ColorContainer.propTypes = {
+  colors: PropTypes.array,
+  toggleLoading: PropTypes.func
+}
