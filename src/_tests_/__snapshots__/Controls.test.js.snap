@@ -2,14 +2,15 @@
 
 exports[`Controls Controls component should match the snapshot 1`] = `
 <div
-  className="color-controls"
+  className="Controls"
 >
   <button
     className="generate-color-button"
     onClick={[Function]}
   >
-    Generate!
+    Generate colors
   </button>
+  <label />
   <select
     name="projectSelection"
     onChange={[Function]}
@@ -45,6 +46,7 @@ exports[`Controls Controls component should match the snapshot 1`] = `
     value=""
   />
   <button
+    className="save-colors-button"
     onClick={[Function]}
   >
     Save

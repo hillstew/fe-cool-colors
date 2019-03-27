@@ -1,0 +1,45 @@
+.Controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 40px;
+  background-color: #eaeaea;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23bababa' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  .generate-color-button, 
+  .save-colors-button {
+    border-radius: 5px;
+    border: none;
+    background-color: #000;
+    color: #f5f5f5;
+    cursor: pointer;
+    height: 30px;
+    width: 70%;
+    font-family: $font-light;
+    margin: 7px auto;
+    text-transform: uppercase;
+  }
+
+  .save-colors-button {
+    width: 55%;
+  }
+
+  input,
+  select {
+    border: none;
+    border-radius: 5px;
+    font-family: $font-light;
+    margin: 5px auto;
+    padding-left: 5px;
+    height: 30px;
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+    font-family: $font-light;
+    font-size: 12px;
+    text-align: left;
+  }
+
+}

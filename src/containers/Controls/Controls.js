@@ -65,12 +65,11 @@ export class Controls extends Component {
       );
     });
     return (
-      <div className='color-controls'>
+      <div className='Controls'>
         <button
           className='generate-color-button'
-          onClick={() => setColors(updateColors(colors))}
-        >
-          Generate!
+          onClick={() => setColors(updateColors(colors))}>
+          Generate colors
         </button>
         <select
           name='projectSelection'
@@ -81,21 +80,25 @@ export class Controls extends Component {
           {options}
           <option value='New Project'>New Project</option>
         </select>
+        <label>Project Name
         <input
           name='newProject'
           value={
             projectSelection !== 'New Project' ? projectSelection : newProject
           }
-          placeholder='Project Name'
+          placeholder='Select Existing Project or New Project Above'
           onChange={this.handleChange}
         />
+        </label>
+        <label>Palette Name
         <input
           name='newPalette'
           value={newPalette}
           placeholder='Palette Name'
           onChange={this.handleChange}
         />
-        <button onClick={this.handleClick}>Save</button>
+        </label>
+        <button onClick={this.handleClick} className='save-colors-button'>Save</button>
       </div>
     );
   }
