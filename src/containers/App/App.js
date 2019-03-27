@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
-// import { withRouter, Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { setColors } from '../../actions';
 import { fetchProjects } from '../../thunks/fetchProjects';
 import { fetchPalettes } from '../../thunks/fetchPalettes';
@@ -18,8 +17,11 @@ export class App extends Component {
   }
 
   render() {
+    const { isLoading, error } = this.props;
     return (
       <div className='App'>
+        {isLoading && <h1>Loading...</h1>}
+        {error && <h1>We're sorry, there seems to have been an error.</h1>}
         <ColorContainer />
         <ProjectContainer />
       </div>
@@ -28,8 +30,6 @@ export class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-  projects: state.projects,
-  palettes: state.palettes,
   error: state.error,
   isLoading: state.isLoading
 });
@@ -44,3 +44,11 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
+
+App.propTypes = {
+  fetchProjects: PropTypes.func,
+  fetchPalettes: PropTypes.func,
+  setColors: PropTypes.func,
+  error: PropTypes.string,
+  isLoading: PropTypes.bool
+};
