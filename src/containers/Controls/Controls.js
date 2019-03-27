@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { setColors } from '../../actions';
 import { updateColors } from '../../utils/helper';
 import { postProject } from '../../thunks/postProject';
@@ -35,14 +36,11 @@ export class Controls extends Component {
       });
     } else {
       let projId;
-      console.log(projects)
       projects.forEach(project => {
         if (project.name === projectSelection) {
-          console.log(project)
           projId = project.id
         }
       })
-      console.log(projId)
 
       postPalette({
         name: newPalette,
@@ -120,3 +118,12 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Controls);
+
+Controls.propTypes = {
+  projects: PropTypes.array,
+  colors: PropTypes.array,
+  setColors: PropTypes.func,
+  postProject: PropTypes.func,
+  postPalette: PropTypes.func,
+  postPaletteToProject: PropTypes.func
+}

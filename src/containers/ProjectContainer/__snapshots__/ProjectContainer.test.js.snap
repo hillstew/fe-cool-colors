@@ -4,7 +4,7 @@ exports[`ProjectContainer should match the snaphot 1`] = `
 <div
   className="ProjectContainer"
 >
-  <ProjectCard
+  <Connect(ProjectCard)
     key="12"
     matchingPalettes={
       Array [

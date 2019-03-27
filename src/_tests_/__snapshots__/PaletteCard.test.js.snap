@@ -4,57 +4,68 @@ exports[`PaletteCard should pass the snapshot 1`] = `
 <div
   className="PaletteCard"
 >
-  <p>
+  <p
+    className="palette-name"
+  >
     test-palette
   </p>
   <div
-    className="palette"
+    className="palette-container"
   >
     <div
-      className="palette-box"
-      style={
-        Object {
-          "backgroundColor": "808080",
+      className="palette"
+      onClick={[Function]}
+    >
+      <div
+        className="palette-box"
+        key="808080"
+        style={
+          Object {
+            "backgroundColor": "808080",
+          }
         }
-      }
-    />
-    <div
-      className="palette-box"
-      style={
-        Object {
-          "backgroundColor": "232323",
+      />
+      <div
+        className="palette-box"
+        key="232323"
+        style={
+          Object {
+            "backgroundColor": "232323",
+          }
         }
-      }
-    />
-    <div
-      className="palette-box"
-      style={
-        Object {
-          "backgroundColor": "1a1a1a",
+      />
+      <div
+        className="palette-box"
+        key="1a1a1a"
+        style={
+          Object {
+            "backgroundColor": "1a1a1a",
+          }
         }
-      }
-    />
-    <div
-      className="palette-box"
-      style={
-        Object {
-          "backgroundColor": "aa2222",
+      />
+      <div
+        className="palette-box"
+        key="aa2222"
+        style={
+          Object {
+            "backgroundColor": "aa2222",
+          }
         }
-      }
-    />
-    <div
-      className="palette-box"
-      style={
-        Object {
-          "backgroundColor": "123abc",
+      />
+      <div
+        className="palette-box"
+        key="123abc"
+        style={
+          Object {
+            "backgroundColor": "123abc",
+          }
         }
-      }
+      />
+    </div>
+    <button
+      className="delete-palette-button"
+      onClick={[Function]}
     />
   </div>
-  <button
-    className="delete-palette-button"
-  >
-    Delete
-  </button>
 </div>
 `;

@@ -16,6 +16,11 @@ exports[`Controls Controls component should match the snapshot 1`] = `
     value=""
   >
     <option
+      value="Select Project"
+    >
+      Select Project
+    </option>
+    <option
       key="abcdefg"
       value="Movie Tracker"
     >
@@ -27,6 +32,18 @@ exports[`Controls Controls component should match the snapshot 1`] = `
       New Project
     </option>
   </select>
+  <input
+    name="newProject"
+    onChange={[Function]}
+    placeholder="Project Name"
+    value=""
+  />
+  <input
+    name="newPalette"
+    onChange={[Function]}
+    placeholder="Palette Name"
+    value=""
+  />
   <button
     onClick={[Function]}
   >

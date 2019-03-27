@@ -18,9 +18,4 @@ describe('ColorCard', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it.skip('should call toggleLocked with the id when the button is clicked', () => {
-    wrapper.find('button').simulate('click');
-    expect(wrapper.instance().props.toggleLocked).toHaveBeenCalled();
-  });
 });

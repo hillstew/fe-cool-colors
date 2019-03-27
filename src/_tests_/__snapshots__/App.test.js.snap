@@ -8,3 +8,27 @@ exports[`App App component should match the snapshot 1`] = `
   <Connect(ProjectContainer) />
 </div>
 `;
+
+exports[`App App component should match the snapshot when isLoading is true 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Loading...
+  </h1>
+  <Connect(ColorContainer) />
+  <Connect(ProjectContainer) />
+</div>
+`;
+
+exports[`App App component should match the snapshot when there is an error 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    We're sorry, there seems to have been an error.
+  </h1>
+  <Connect(ColorContainer) />
+  <Connect(ProjectContainer) />
+</div>
+`;

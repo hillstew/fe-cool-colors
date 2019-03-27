@@ -7,9 +7,9 @@ export const postPalette = newPalette => {
     try {
       dispatch(setLoading(true));
       const response = await postData(url, newPalette);
-      const paletteId = response.json();
+      const palette = await response.json();
       dispatch(setLoading(false));
-      dispatch(setPalette({...newPalette, id: paletteId }));
+      dispatch(setPalette({...newPalette, id: palette.id }));
     } catch (error) {
       dispatch(setError(error.message));
     }
