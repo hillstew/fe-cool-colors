@@ -20,8 +20,8 @@ export class App extends Component {
     const { isLoading, error } = this.props;
     return (
       <div className='App'>
-        {isLoading && <h1>Loading...</h1>}
-        {error && <h1>We're sorry, there seems to have been an error.</h1>}
+        {isLoading && <h1 className='notice'>Loading...</h1>}
+        {error && <h1 className='notice'>We're sorry, there seems to have been an error.</h1>}
         <ColorContainer />
         <ProjectContainer />
       </div>
