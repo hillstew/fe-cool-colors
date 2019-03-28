@@ -18,6 +18,10 @@
     width: 33px;
     border: none;
     cursor: pointer;
+    
+    &:focus {
+      outline: none;
+    }
   }
 
   .locked-button {
@@ -27,5 +31,9 @@
     width: 33px;
     border: none;
     cursor: pointer;
+
+    &:focus {
+      outline: none;    
+    }
   }
 }
