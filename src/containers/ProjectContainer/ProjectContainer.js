@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import { makeColor } from '../../utils/helper';
 
 export class ProjectContainer extends Component {
   render() {
@@ -10,13 +11,21 @@ export class ProjectContainer extends Component {
       const matchingPalettes = palettes.filter(palette => {
         return palette.project_id === project.id;
       });
-
       return (
-        <ProjectCard matchingPalettes={matchingPalettes} project={project} key={project.id} />
+        <ProjectCard
+          matchingPalettes={matchingPalettes}
+          project={project}
+          key={project.id}
+        />
       );
     });
 
-    return <div className="ProjectContainer">{projectCards}</div>;
+    return (
+      <div className='ProjectContainer'>
+        <h1 className='title' style={{ color: `#${makeColor()}` }}>Kewl Kolorz 🌈</h1>
+        {projectCards}
+      </div>
+    );
   }
 }
 

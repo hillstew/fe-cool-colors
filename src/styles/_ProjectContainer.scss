@@ -1,4 +1,12 @@
 .ProjectContainer {
   background-color: #f5f5f5;
   overflow: scroll;
+
+  .title {
+    font-family: $font-bold;
+    text-align: right;
+    margin: 20px 50px 0px 0px;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #000;
+  }
 }

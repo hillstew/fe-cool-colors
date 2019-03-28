@@ -13,7 +13,9 @@ exports[`App App component should match the snapshot when isLoading is true 1`] 
 <div
   className="App"
 >
-  <h1>
+  <h1
+    className="loading-notice"
+  >
     Loading...
   </h1>
   <Connect(ColorContainer) />
