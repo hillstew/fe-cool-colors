@@ -4,19 +4,19 @@
 
 Kewl Kolorz is a full stack application that allow users to generate colors and save them to projects for later reference. The front-end stack includes React, Redux and tested using Jest and Enzyme. The back-end application can be referenced [here](https://github.com/hillstew/be-cool-colors).
 
-### Set-Up Frontend:
+### Setup front-end:
 
 - `git clone https://github.com/whitneyburton/fe-cool-colors.git`
 - `npm install` from the root directory
 - `npm start` and visit http://localhost:3000 in your browser
 
-### Set-Up Backend:
+### Setup back-end:
 
 - `git clone https://github.com/hillstew/be-cool-colors.git`
 - `npm install` from the root directory
 - `npm start` and visit http://localhost:3002 in your browser
 
-### Primary Technologies Used:
+### Primary technologies:
 
 - React
 - Redux
@@ -32,7 +32,7 @@ Kewl Kolorz is a full stack application that allow users to generate colors and 
 
 ![app demo]()
 
-### Original Assignment:
+### Assignment spec:
 
 [Palette Picker](http://frontend.turing.io/projects/palette-picker.html)
 
