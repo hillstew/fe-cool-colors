@@ -30,15 +30,15 @@ Kewl Kolorz is a full stack application that allow users to generate colors and 
 
 ### Final App
 
-![app demo]()
+![2019-03-28 09 47 26](https://user-images.githubusercontent.com/33883645/55175949-dafb3400-5145-11e9-901f-c7ac70c1f13b.gif)
 
 ### Assignment spec:
 
 [Palette Picker](http://frontend.turing.io/projects/palette-picker.html)
 
 ### Wireframe:
-
-![Created with Figma]()
+Created with Figma
+![Wireframe](https://user-images.githubusercontent.com/33883645/55175779-91aae480-5145-11e9-8ecc-15bec34a61fd.png)
 
 ### Contributors:
 
